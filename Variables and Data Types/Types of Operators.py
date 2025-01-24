@@ -25,18 +25,25 @@
 
 
 # Assignment Operators
-a = 10
-a += 5 # a = a + 5
-print(a)
-a -= 5 # a = a - 5
-print(a)
-a *= 5 # a = a * 5
-print(a)
-a /= 5 # a = a / 5
-print(a)
-a //= 5 # a = a // 5
-print(a)
-a %= 5 # a = a % 5
-print(a)
-a **= 5 # a = a ** 5
-print(a)
+# a = 10
+# a += 5 # a = a + 5
+# print(a)
+# a -= 5 # a = a - 5
+# print(a)
+# a *= 5 # a = a * 5
+# print(a)
+# a /= 5 # a = a / 5
+# print(a)
+# a //= 5 # a = a // 5
+# print(a)
+# a %= 5 # a = a % 5
+# print(a)
+# a **= 5 # a = a ** 5
+# print(a)
+
+# Logical Operators
+a = True
+b = False
+print("AND:", a and b) # False
+print("OR:", a or b) # True
+print("NOT:", not a) # False
