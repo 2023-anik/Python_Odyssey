@@ -19,6 +19,7 @@ s = "python programming"
 print(s.capitalize())  # Output: Python programming
 
 # count() -> returns the number of occurrences of a substring in a string
+# Doen't work for overlapping substrings. For example, "PythonPython".count("Python") will return 1
 s = "Python is easy to learn. Python is open-source."
 print(s.count("Python"))  # Output: 2
 
@@ -33,6 +34,7 @@ print(s.rfind("Python"))  # Output: 26
 # index() -> returns the index of the first occurrence of a substring in a string
 s = "Python is easy to learn. Python is open-source."
 print(s.index("Python"))  # Output: 0
+print(s.index("Python", 1))  # Output: 26 (starting from index 1)
 
 # rindex() -> returns the index of the last occurrence of a substring in a string
 s = "Python is easy to learn. Python is open-source."

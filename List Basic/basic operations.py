@@ -21,7 +21,7 @@ print(list[-1]) # 5
 print(list[-2]) # date
 print(list[-len(list)]) # 1
 
-# list is mutable
+# list is mutable (changeable) we can change the value of a list element
 list = [1, 2.2, 'c', 'date', 5]
 list[0] = 10
 list[1] = 20.2
@@ -60,12 +60,12 @@ for i in list:
 list = [1, 2.2, 'c', 'date', 5]
 print(len(list)) # 5
 
-# list append
+# list append (add an element at the end of the list)
 list = [1, 2.2, 'c', 'date', 5]
 list.append(6)
 print(list) # [1, 2.2, 'c', 'date', 5, 6]
 
-# list insert
+# list insert (add an element at a specific index)
 list = [1, 2.2, 'c', 'date', 5]
 list.insert(2, 'new')
 print(list) # [1, 2.2, 'new', 'c', 'date', 5]
@@ -113,11 +113,15 @@ list2 = list.copy()
 print(list2) # [1, 2.2, 'c', 'date', 5]
 
 # list comprehension
-list = [i for i in range(10)]
+list = [i for i in range(10)] # 1st 'i' is the element, 2nd 'i' is the loop variable 
 print(list) # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 # list comprehension with condition
 list = [i for i in range(10) if i % 2 == 0] # even numbers
 print(list) # [0, 2, 4, 6, 8]
 print(type(list)) # <class 'list'>
+
+# list comprehension with nested loop
+list = [(i, j) for i in range(3) for j in range(3)]
+print(list) # [(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), (1, 2), (2, 0), (2, 1), (2, 2)]
 
