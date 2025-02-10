@@ -9,15 +9,16 @@ class Account:
     def debit(self, amount):
         self.balance -= amount
         print(f"Debited {amount} from Account No: {self.accNo}")
+        print(f"Remaining balance: {self.getBalance()}")
 
     def credit(self, amount):
         self.balance += amount
         print(f"Credited {amount} to Account No: {self.accNo}")
+        print(f"Remaining balance: {self.getBalance()}")
     
-    def printBalance(self):
-        print(f"Account No: {self.accNo}\nBalance: {self.balance}")
+    def getBalance(self):
+        return self.balance
 
 a1 = Account(1000, 101)
 a1.debit(100)
 a1.credit(200)
-a1.printBalance()
