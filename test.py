@@ -64,7 +64,14 @@
 
 # print(f"The average result of {num_rolls} rolls is {avg_roll}")
 
+# def get_second_element(item):
+#     return item[1]
 
-items = [(4, 1), (1, 2), (-9, 0)]
-items.sort()
-print(items)
+# items = [(4, 1), (1, 2), (-9, 0)]
+# items.sort(key=get_second_element)
+# print(items)
+
+data = ((1, 2), (3, 4))
+
+for i in data:
+    print(f"Row {data.index(i)+1} sum: {sum(i)}")
