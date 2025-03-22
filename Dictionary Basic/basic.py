@@ -27,6 +27,8 @@ print(my_dict) #{'name': 'John', 'age': 26, 'city': 'New York', 'email': 'heda@g
 #Removing items
 my_dict.pop("email")
 print(my_dict) #{'name': 'John', 'age': 26, 'city': 'New York'}
+del my_dict["name"]
+print(my_dict) #{'age': 26, 'city': 'New York'}
 
 #Dictionary methods
 print(my_dict.keys()) #dict_keys(['name', 'age', 'city'])
