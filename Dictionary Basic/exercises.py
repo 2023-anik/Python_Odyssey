@@ -15,3 +15,12 @@ for ship, captain in captains.items():
 
 # del captains["Discovery"]
 # print(captains)
+
+# captains.clear()
+cpatains = dict(
+    [
+        ("Enterprise", "Picard"),
+        ("Voyager", "Janeway"),
+        ("Defiant", "Sisko")
+    ]
+)
