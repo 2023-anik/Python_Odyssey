@@ -1,38 +1,33 @@
-print("*","\n**","\n***","\n****","\n*****")
-print(5,5)
-print(8)
-print(13, end=" ")
-print(21)
-for i in range(5):
-    print(i, end=" ") #end=" " is used to print the next print statement in the same line
-print()
-for i in range(5):
-    print(i)
+# 9.9 - Challenge: Cats With Hats
+# Solution to challenge
 
-print(7, "\n", 5)
-print(7, "\n5")
-print("Python","Programming")
-print("Hello", "World", 5, "endl", 2)
-print(1,2,3,4,5)
 
-s = "I love CodeChef"
-s = s.split()
-for i in range(len(s)):
-    print(s[i])
+def get_cats_with_hats(array_of_cats):
+    cats_with_hats_on = []
+    # We want to walk around the circle 100 times
+    for num in range(1, 100 + 1):
+        # Each time we walk around, we visit 100 cats
+        for cat in range(1, 100 + 1):
+            # Determine whether to visit the cat
+            # Use modulo operator to visit every 2nd, 3rd, 4th,... etc.
+            if cat % num == 0:
+                # Remove or add hat depending on
+                # whether the cat already has one
+                if array_of_cats[cat] is True:
+                    array_of_cats[cat] = False
+                else:
+                    array_of_cats[cat] = True
 
-for i in range(1, 6):
-    print(f"{i}-{i**2}")
+    # Add all number of each cat with a hat to list
+    for cat in range(1, 100 + 1):
+        if array_of_cats[cat] is True:
+            cats_with_hats_on.append(cat)
 
-for i in range(4):
-    for j in range(4):
-        print("*", end="")
-    print()
+    # Return the resulting list
+    return cats_with_hats_on
 
-x, y = 20, 6
-print(x//y)
 
-c = 25.5
-print(f"Celsius-{c}\nKelvin-{c+273}")
-
-l = 4.5
-print(f"{4.5**2}\n{4*4.5}")
+# Cats contains whether each cat already has a hat on,
+# by default all are set to false since none have been visited
+cats = [False] * (100 + 1)
+print(get_cats_with_hats(cats))
