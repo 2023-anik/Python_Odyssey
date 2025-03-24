@@ -1,33 +1,27 @@
-# 9.9 - Challenge: Cats With Hats
-# Solution to challenge
+class Dog:
+    species = 'Canis familiaris'
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    # Instance method
+    def description(self):
+        return f"Description: {self.name} is {self.age} years old"
 
+    # Another instance method
+    def speak(self, sound):
+        return f"{self.name} says {sound}"
 
-def get_cats_with_hats(array_of_cats):
-    cats_with_hats_on = []
-    # We want to walk around the circle 100 times
-    for num in range(1, 100 + 1):
-        # Each time we walk around, we visit 100 cats
-        for cat in range(1, 100 + 1):
-            # Determine whether to visit the cat
-            # Use modulo operator to visit every 2nd, 3rd, 4th,... etc.
-            if cat % num == 0:
-                # Remove or add hat depending on
-                # whether the cat already has one
-                if array_of_cats[cat] is True:
-                    array_of_cats[cat] = False
-                else:
-                    array_of_cats[cat] = True
-
-    # Add all number of each cat with a hat to list
-    for cat in range(1, 100 + 1):
-        if array_of_cats[cat] is True:
-            cats_with_hats_on.append(cat)
-
-    # Return the resulting list
-    return cats_with_hats_on
-
-
-# Cats contains whether each cat already has a hat on,
-# by default all are set to false since none have been visited
-cats = [False] * (100 + 1)
-print(get_cats_with_hats(cats))
+    # Magic method
+    def __str__(self):
+        return f"Magic method: {self.name} is {self.age} years old"
+    
+miles = Dog("Miles", 4)
+print(miles) # <__main__.Dog object at 0self7f8b8c6b3d30>
+# when we use Magic method __str__ we can get the output like this:
+# Miles is 4 years old
+# The name of the Magic method is __str__ and it is used to return a string representation of the object.
+# The __str__ method is called when the print() or str() function is invoked on an object.
+# The __str__ method should return a string.
+# The __str__ method is one of Python's so-called "magic methods".
+print(miles.description())
+print(miles.speak("Woof Woof"))
