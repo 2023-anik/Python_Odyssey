@@ -15,7 +15,7 @@ print(current) #To get the current directory
 
 # check a path absolute or relative
 print(path.is_absolute())
-print(home.is_absolute()) 
+print(home.is_absolute())
 print(current.is_absolute())
 
 #extend a relative path to an absolute path
@@ -23,4 +23,3 @@ print(path.absolute())
 
 #To get the parent directory
 print(path.parent)
-
