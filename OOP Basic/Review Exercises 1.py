@@ -13,4 +13,11 @@ class Dog:
 
 class GoldenRetriever(Dog):
     def speak(self, sound="Bark"):
-        return super().speak(sound)
+        return super().speak(sound) # super() is used to call the method of parent class
+    
+dog1 = Dog("Buddy", 3)
+print(dog1)
+print(dog1.speak("Woof"))
+dog2 = GoldenRetriever("Max", 5)
+print(dog2)
+print(dog2.speak())
