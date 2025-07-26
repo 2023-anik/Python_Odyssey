@@ -35,7 +35,7 @@ cursor.execute(
     """
 )
 # Fetch the results
-people = cursor.fetchall()
+people = cursor.fetchall() #fetchall() retrieves all rows from the result set of a query
 # Print the results
 for person in people:
     print(person)

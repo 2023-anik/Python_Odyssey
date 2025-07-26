@@ -25,8 +25,8 @@ with sqlite3.connect(Path.cwd()/'SQLite Basics'/'firstDB.db') as connection:
             ('Bob', 'Brown', 35);
         """
     )
-    # Save (commit) the changes
-    connection.commit()
+    # Save (commit) the changes is not needed in a with statement
+    # connection.commit() 
     # Query the database
     cursor.execute(
         """
